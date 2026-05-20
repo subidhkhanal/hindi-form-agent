@@ -1,0 +1,1332 @@
+[
+  {
+    "input_text": "मेरा नाम रामसहाय यादव है। मेरी उम्र अट्ठावन साल है। मेरी पत्नी का नाम लक्ष्मी देवी है। हम उत्तर प्रदेश के बलिया जिले के सिकंदरपुर कस्बे में रहते हैं। मैं निर्माण मजदूरी का काम करता हूं, फिलहाल कोई काम नहीं मिल रहा है, आमदनी शून्य है। मैं पिछड़ी जाति का हिंदू हूं। आधार कार्ड और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "रामसहाय यादव",
+      "age": 58,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "लक्ष्मी देवी",
+      "village_or_town": "सिकंदरपुर",
+      "district": "बलिया",
+      "state": "उत्तर प्रदेश",
+      "occupation": "निर्माण मजदूर",
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "UP construction unemployed married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 151
+    }
+  },
+  {
+    "input_text": "मेरा नाम संगीता कोरकू है। मेरी उम्र बीस साल है। मेरे पति का नाम भीमा कोरकू है। हम उत्तर प्रदेश के सोनभद्र जिले के एक आदिवासी गांव में रहते हैं। मैं आंगनवाड़ी कार्यकर्ता हूं, मानदेय करीब सात हजार रुपये मासिक है। मैं अनुसूचित जनजाति की हिंदू हूं। आधार कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "संगीता कोरकू",
+      "age": 20,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "भीमा कोरकू",
+      "district": "सोनभद्र",
+      "state": "उत्तर प्रदेश",
+      "occupation": "आंगनवाड़ी कार्यकर्ता",
+      "monthly_income_inr": 7000,
+      "caste_category": "st",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "UP anganwadi young married ST Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 152
+    }
+  },
+  {
+    "input_text": "बस चलाने का काम करता हूं। मेरा नाम संजीव कांबले है, उम्र इकत्तीस साल है। मेरी पत्नी का नाम स्वाति है। हम महाराष्ट्र के नागपुर में रहते हैं। राज्य परिवहन की लंबी दूरी की बस चलाता हूं, मासिक वेतन सत्तर हजार रुपये है। मैं पिछड़ी जाति का हिंदू हूं। आधार कार्ड और बैंक ऑफ महाराष्ट्र में खाता है।",
+    "output_json": {
+      "full_name": "संजीव कांबले",
+      "age": 31,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "स्वाति",
+      "village_or_town": "नागपुर",
+      "state": "महाराष्ट्र",
+      "occupation": "बस चालक",
+      "monthly_income_inr": 70000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "बैंक ऑफ महाराष्ट्र"
+    },
+    "metadata": {
+      "persona": "Maharashtra bus driver married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Maharashtra",
+      "source": "synthetic-claude-day4",
+      "slot": 153
+    }
+  },
+  {
+    "input_text": "मेरा नाम मीना मंडल है। मेरी उम्र छियालीस साल है। मेरे पति का नाम सजल मंडल है। हम पश्चिम बंगाल के मुर्शिदाबाद जिले में रहते हैं। मेरी एक छोटी पान-तंबाकू की दुकान है, महीने में करीब आठ हजार रुपये कमा लेती हूं। मैं अनुसूचित जाति की हिंदू हूं। आधार कार्ड और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "मीना मंडल",
+      "age": 46,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "सजल मंडल",
+      "district": "मुर्शिदाबाद",
+      "state": "पश्चिम बंगाल",
+      "occupation": "पान दुकानदार",
+      "monthly_income_inr": 8000,
+      "caste_category": "sc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "WB shopkeeper married SC Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "West Bengal",
+      "source": "synthetic-claude-day4",
+      "slot": 154
+    }
+  },
+  {
+    "input_text": "एक प्राइवेट स्कूल में शिक्षिका हूं। मेरा नाम जसप्रीत कौर है, उम्र अट्ठाईस साल है। मेरे पति का नाम मनप्रीत सिंह है। हम तमिलनाडु के चेन्नई में रहते हैं। मासिक वेतन पैंसठ हजार रुपये है। मैं सामान्य जाति की सिख हूं। आधार कार्ड और एचडीएफसी बैंक में खाता है।",
+    "output_json": {
+      "full_name": "जसप्रीत कौर",
+      "age": 28,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "मनप्रीत सिंह",
+      "village_or_town": "चेन्नई",
+      "state": "तमिलनाडु",
+      "occupation": "शिक्षिका",
+      "monthly_income_inr": 65000,
+      "caste_category": "general",
+      "religion": "सिख",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "एचडीएफसी बैंक"
+    },
+    "metadata": {
+      "persona": "Tamil Nadu Sikh teacher married general",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Tamil Nadu",
+      "source": "synthetic-claude-day4",
+      "slot": 155
+    }
+  },
+  {
+    "input_text": "घरेलू सहायिका के तौर पर काम करती हूं। मेरा नाम कौशल्या देवी है, उम्र अट्ठावन साल है। मेरे पति का नाम राजनाथ है। हम बिहार के सीवान जिले में रहते हैं। दो-तीन घरों में काम करके महीने में बीस हजार रुपये कमा लेती हूं। मैं पिछड़ी जाति की हिंदू हूं। आधार कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "कौशल्या देवी",
+      "age": 58,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "राजनाथ",
+      "district": "सीवान",
+      "state": "बिहार",
+      "occupation": "घरेलू सहायिका",
+      "monthly_income_inr": 20000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Bihar domestic worker married OBC Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Bihar",
+      "source": "synthetic-claude-day4",
+      "slot": 156
+    }
+  },
+  {
+    "input_text": "गृहिणी हूं, पति की दुकान में हाथ भी बंटाती हूं। मेरा नाम जयश्री पटेल है, उम्र चौवन साल है। मेरे पति का नाम रमेश पटेल है। हम गुजरात के भावनगर में रहते हैं। पति की कमाई से करीब बाईस हजार रुपये मासिक की पारिवारिक आय है। मैं पिछड़ी जाति की हिंदू हूं। आधार कार्ड, मतदाता पहचान पत्र और बैंक खाता है।",
+    "output_json": {
+      "full_name": "जयश्री पटेल",
+      "age": 54,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "रमेश पटेल",
+      "village_or_town": "भावनगर",
+      "state": "गुजरात",
+      "occupation": "गृहिणी",
+      "monthly_income_inr": 22000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Gujarat homemaker married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Gujarat",
+      "source": "synthetic-claude-day4",
+      "slot": 157
+    }
+  },
+  {
+    "input_text": "तलाक के बाद घर पर रहता हूं। मेरा नाम आशीष पटनायक है, उम्र बीस साल है। मैं ओडिशा के भुवनेश्वर शहर के पटिया इलाके में रहता हूं। एक स्टार्टअप में जूनियर डेवलपर के तौर पर शुरू किया था, अभी इंटर्न के तौर पर हूं, मासिक केवल बारह हजार रुपये मिलते हैं। मैं सामान्य जाति का हिंदू हूं। आधार कार्ड, पैन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "आशीष पटनायक",
+      "age": 20,
+      "gender": "male",
+      "marital_status": "divorced",
+      "village_or_town": "पटिया",
+      "state": "ओडिशा",
+      "occupation": "जूनियर डेवलपर",
+      "monthly_income_inr": 12000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Odisha young dev divorced general Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Odisha",
+      "source": "synthetic-claude-day4",
+      "slot": 158
+    }
+  },
+  {
+    "input_text": "इस उम्र में भी ऑटो चलाती हूं। मेरा नाम जरीना खातून है, उम्र इकहत्तर साल है। मेरे पति का नाम रहमत अली है। हम राजस्थान के अजमेर शहर में रहते हैं। महीने में करीब पैंतीस हजार रुपये कमा लेती हूं। मैं पिछड़े वर्ग की मुस्लिम हूं। आधार कार्ड, पैन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "जरीना खातून",
+      "age": 71,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "रहमत अली",
+      "village_or_town": "अजमेर",
+      "state": "राजस्थान",
+      "occupation": "ऑटो चालक",
+      "monthly_income_inr": 35000,
+      "caste_category": "obc",
+      "religion": "इस्लाम",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Rajasthan elder female auto driver married OBC Muslim",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Rajasthan",
+      "source": "synthetic-claude-day4",
+      "slot": 159
+    }
+  },
+  {
+    "input_text": "मेरा नाम लोयांगाम्बा सिंह है। मेरी उम्र अट्ठावन वर्ष है। मेरी पत्नी का नाम चानू देवी है। हम मणिपुर के इम्फाल पश्चिम जिले में रहते हैं। मैं राज्य परिवहन की बस चलाता था, अब बस सेवा बंद होने के कारण कोई आय नहीं है। मैं पिछड़े वर्ग का हिंदू हूं। आधार कार्ड, मतदाता पहचान पत्र, राशन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "लोयांगाम्बा सिंह",
+      "age": 58,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "चानू देवी",
+      "district": "इम्फाल पश्चिम",
+      "state": "मणिपुर",
+      "occupation": "बस चालक",
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_ration_card": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Manipur bus driver no work married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Manipur",
+      "source": "synthetic-claude-day4",
+      "slot": 160
+    }
+  },
+  {
+    "input_text": "मेरा नाम भोलाराम मीणा है। मेरी उम्र इकहत्तर साल है। मेरी पत्नी का नाम चंदा देवी है। हम राजस्थान के दौसा जिले के लालसोट कस्बे में रहते हैं। मैं अभी भी खेती करता हूं, बेटा साथ है। महीने में करीब चालीस हजार रुपये कमा लेता हूं। मैं अनुसूचित जनजाति का हिंदू हूं। आधार कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "भोलाराम मीणा",
+      "age": 71,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "चंदा देवी",
+      "village_or_town": "लालसोट",
+      "district": "दौसा",
+      "state": "राजस्थान",
+      "occupation": "किसान",
+      "monthly_income_inr": 40000,
+      "caste_category": "st",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Rajasthan elder farmer married ST Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Rajasthan",
+      "source": "synthetic-claude-day4",
+      "slot": 161
+    }
+  },
+  {
+    "input_text": "मेरा नाम रामनाथ हरिजन है। मेरी उम्र सत्तर साल है। मेरी पत्नी का नाम पार्वती देवी है। हम उत्तर प्रदेश के हरदोई जिले में रहते हैं। पहले दर्जी का काम करता था, अब आंखें कमजोर हो गई हैं, फिलहाल कोई आय नहीं है। मैं अनुसूचित जनजाति का हिंदू हूं। आधार कार्ड, राशन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "रामनाथ हरिजन",
+      "age": 70,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "पार्वती देवी",
+      "district": "हरदोई",
+      "state": "उत्तर प्रदेश",
+      "occupation": "दर्जी",
+      "caste_category": "st",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "UP retired tailor married ST Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 162
+    }
+  },
+  {
+    "input_text": "अविवाहित जीवन गुजार रही हूं, अपनी छोटी सी दुकान चलाती हूं। मेरा नाम विजयलक्ष्मी राव है, उम्र अट्ठावन वर्ष है। मैं आंध्र प्रदेश के अनंतपुर शहर में रहती हूं। महीने में लगभग चालीस हजार रुपये कमा लेती हूं। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड, पैन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "विजयलक्ष्मी राव",
+      "age": 58,
+      "gender": "female",
+      "marital_status": "single",
+      "village_or_town": "अनंतपुर",
+      "state": "आंध्र प्रदेश",
+      "occupation": "दुकानदार",
+      "monthly_income_inr": 40000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "AP shopkeeper single general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Andhra Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 163
+    }
+  },
+  {
+    "input_text": "विधवा हूं, छोटे खेत पर ही जीवन गुजार रही हूं। मेरा नाम कमलजीत कौर है, उम्र अड़तालीस साल है। मेरे स्वर्गीय पति का नाम हरमिंदर सिंह था। मैं तमिलनाडु के कोयंबटूर जिले के पोल्लाची कस्बे में रहती हूं। महीने में करीब आठ हजार रुपये बनते हैं। मैं पिछड़े वर्ग की सिख हूं। आधार कार्ड और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "कमलजीत कौर",
+      "age": 48,
+      "gender": "female",
+      "marital_status": "widowed",
+      "father_or_husband_name": "स्वर्गीय हरमिंदर सिंह",
+      "village_or_town": "पोल्लाची",
+      "district": "कोयंबटूर",
+      "state": "तमिलनाडु",
+      "occupation": "किसान",
+      "monthly_income_inr": 8000,
+      "caste_category": "obc",
+      "religion": "सिख",
+      "has_aadhaar": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "Tamil Nadu Sikh widow farmer OBC",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Tamil Nadu",
+      "source": "synthetic-claude-day4",
+      "slot": 164
+    }
+  },
+  {
+    "input_text": "मेरा नाम मंजू देवी है। मेरी उम्र अड़तालीस साल है। मैं उत्तर प्रदेश के अंबेडकर नगर जिले की निवासी हूं। अविवाहित हूं। फिलहाल कोई स्थिर काम नहीं है, बेरोजगार हूं। आय करीब नौ हजार रुपये मासिक की होती है, पास-पड़ोस से छोटे-मोटे काम से। मैं पिछड़े वर्ग की हिंदू हूं। आधार कार्ड और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "मंजू देवी",
+      "age": 48,
+      "gender": "female",
+      "marital_status": "single",
+      "district": "अंबेडकर नगर",
+      "state": "उत्तर प्रदेश",
+      "occupation": "बेरोजगार",
+      "monthly_income_inr": 9000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "UP unemployed single OBC Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 165
+    }
+  },
+  {
+    "input_text": "मेरा नाम सुखजीत कौर है। मेरी आयु तैंतालीस वर्ष है। मेरे पति का नाम जसवंत सिंह है। हम पंजाब के संगरूर जिले में रहते हैं। मैं आशा कार्यकर्ता हूं, मानदेय करीब बाईस हजार रुपये मासिक है। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड, पैन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "सुखजीत कौर",
+      "age": 43,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "जसवंत सिंह",
+      "district": "संगरूर",
+      "state": "पंजाब",
+      "occupation": "आशा कार्यकर्ता",
+      "monthly_income_inr": 22000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Punjab ASHA married general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Punjab",
+      "source": "synthetic-claude-day4",
+      "slot": 166
+    }
+  },
+  {
+    "input_text": "मेरा नाम मोहम्मद इदरीस अंसारी है। मेरी आयु बयालीस वर्ष है। मेरी पत्नी का नाम शाहीन है। हम उत्तर प्रदेश के बहराइच जिले में रहते हैं। एक निजी कंपनी में सहायक प्रबंधक के पद पर हूं, मासिक वेतन ग्यारह हजार रुपये है। मैं सामान्य जाति का मुस्लिम हूं। आधार कार्ड, पैन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "मोहम्मद इदरीस अंसारी",
+      "age": 42,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "शाहीन",
+      "district": "बहराइच",
+      "state": "उत्तर प्रदेश",
+      "occupation": "सहायक प्रबंधक",
+      "monthly_income_inr": 11000,
+      "caste_category": "general",
+      "religion": "इस्लाम",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "UP private exec married general Muslim",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 167
+    }
+  },
+  {
+    "input_text": "अविवाहित हूं, अब बेटे के परिवार के साथ रहता हूं। मेरा नाम रामेश्वर पांडे है, उम्र सड़सठ साल है। मैं उत्तर प्रदेश के बस्ती जिले के एक गांव में रहता हूं। पहले काम करता था, अब घर पर ही हूं, कोई आय नहीं है। मैं सामान्य जाति का हिंदू हूं। आधार कार्ड, मतदाता पहचान पत्र और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "रामेश्वर पांडे",
+      "age": 67,
+      "gender": "male",
+      "marital_status": "single",
+      "district": "बस्ती",
+      "state": "उत्तर प्रदेश",
+      "occupation": "गृहस्थ",
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "UP elderly single general Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 168
+    }
+  },
+  {
+    "input_text": "एक प्राइवेट अस्पताल में सहायक नर्स का काम कर रहा हूं। मेरा नाम महेश पटेल है, उम्र इक्कीस साल है। मैं गुजरात के राजकोट में रहता हूं, अविवाहित हूं। मासिक वेतन तेरह हजार रुपये है। मैं पिछड़ी जाति का हिंदू हूं। आधार कार्ड, मतदाता पहचान पत्र और बैंक खाता है।",
+    "output_json": {
+      "full_name": "महेश पटेल",
+      "age": 21,
+      "gender": "male",
+      "marital_status": "single",
+      "village_or_town": "राजकोट",
+      "state": "गुजरात",
+      "occupation": "सहायक नर्स",
+      "monthly_income_inr": 13000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Gujarat young nurse single OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Gujarat",
+      "source": "synthetic-claude-day4",
+      "slot": 169
+    }
+  },
+  {
+    "input_text": "मेरा नाम पद्मा रेड्डी है। मेरी आयु इकतालीस वर्ष है। मेरे पति का नाम वेंकट रेड्डी है। हम तेलंगाना के करीमनगर जिले में रहते हैं। मैं घर पर सिलाई का काम करती हूं, छोटी सी कारीगरी की दुकान भी है। महीने में लगभग पैंतालीस हजार रुपये कमा लेती हूं। मैं पिछड़ी जाति की हिंदू हूं। आधार कार्ड और एसबीआई बैंक में खाता है।",
+    "output_json": {
+      "full_name": "पद्मा रेड्डी",
+      "age": 41,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "वेंकट रेड्डी",
+      "district": "करीमनगर",
+      "state": "तेलंगाना",
+      "occupation": "दर्जिन",
+      "monthly_income_inr": 45000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "भारतीय स्टेट बैंक"
+    },
+    "metadata": {
+      "persona": "Telangana tailor married OBC Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Telangana",
+      "source": "synthetic-claude-day4",
+      "slot": 170
+    }
+  },
+  {
+    "input_text": "अविवाहित हूं और गृहिणी का जीवन जी रही हूं। मेरा नाम सुरमेला देबबर्मा है, उम्र इक्कीस साल है। पिता का नाम सुनील देबबर्मा है। मैं त्रिपुरा के दक्षिण त्रिपुरा जिले में रहती हूं। थोड़ी मोमबत्ती और अगरबत्ती बनाती हूं, महीने में करीब बीस हजार रुपये बनते हैं। मैं पिछड़े वर्ग की सिख हूं। आधार कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "सुरमेला देबबर्मा",
+      "age": 21,
+      "gender": "female",
+      "marital_status": "single",
+      "father_or_husband_name": "सुनील देबबर्मा",
+      "district": "दक्षिण त्रिपुरा",
+      "state": "त्रिपुरा",
+      "occupation": "गृहिणी",
+      "monthly_income_inr": 20000,
+      "caste_category": "obc",
+      "religion": "सिख",
+      "has_aadhaar": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Tripura homemaker young OBC Sikh",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Tripura",
+      "source": "synthetic-claude-day4",
+      "slot": 171
+    }
+  },
+  {
+    "input_text": "मेरा नाम विजयलक्ष्मी राजन है। मेरी आयु तैंतालीस साल है। मेरे पति का नाम राजन पिल्लई हैं। हम तमिलनाडु के तिरुनेलवेली में रहते हैं। मेरी एक डिजाइनर बुटीक है, अच्छा कारोबार है, महीने में लगभग पचहत्तर हजार रुपये कमा लेती हूं। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड और एचडीएफसी बैंक में चालू खाता है।",
+    "output_json": {
+      "full_name": "विजयलक्ष्मी राजन",
+      "age": 43,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "राजन पिल्लई",
+      "village_or_town": "तिरुनेलवेली",
+      "state": "तमिलनाडु",
+      "occupation": "दर्जिन",
+      "monthly_income_inr": 75000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "एचडीएफसी बैंक"
+    },
+    "metadata": {
+      "persona": "Tamil Nadu boutique owner married general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Tamil Nadu",
+      "source": "synthetic-claude-day4",
+      "slot": 172
+    }
+  },
+  {
+    "input_text": "एक ग्राम पंचायत में लिपिक का काम कर रही हूं। मेरा नाम सुनिता रावत है, उम्र तीस साल है। मेरे पति का नाम विकास रावत है। हम उत्तर प्रदेश के गोरखपुर जिले में रहते हैं। मासिक वेतन ग्यारह हजार रुपये है। मैं हिंदू हूं। आधार कार्ड, पैन कार्ड, मतदाता पहचान पत्र और बैंक खाता है।",
+    "output_json": {
+      "full_name": "सुनिता रावत",
+      "age": 30,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "विकास रावत",
+      "district": "गोरखपुर",
+      "state": "उत्तर प्रदेश",
+      "occupation": "लिपिक",
+      "monthly_income_inr": 11000,
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_voter_id": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "UP panchayat clerk married unspecified Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 173
+    }
+  },
+  {
+    "input_text": "मेरा नाम सुजाता हेगड़े है। मेरी उम्र बाईस साल है। मेरे पति का नाम रवि हेगड़े है। हम कर्नाटक के बेंगलुरु शहर के यलहंका इलाके में रहते हैं, पिनकोड 560064 है। मैं गृहिणी हूं, पति की आय से करीब बीस हजार रुपये मासिक का घर चलता है। मैं अनुसूचित जाति की हिंदू हूं। आधार कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "सुजाता हेगड़े",
+      "age": 22,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "रवि हेगड़े",
+      "village_or_town": "यलहंका",
+      "state": "कर्नाटक",
+      "pincode": "560064",
+      "occupation": "गृहिणी",
+      "monthly_income_inr": 20000,
+      "caste_category": "sc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Karnataka homemaker young married SC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Karnataka",
+      "source": "synthetic-claude-day4",
+      "slot": 174
+    }
+  },
+  {
+    "input_text": "मेरा नाम राकेश तिवारी है। मेरी आयु छब्बीस साल है। मेरी पत्नी का नाम अंजली तिवारी है। हम मध्य प्रदेश के सतना जिले में रहते हैं। मेरी छोटी किराना दुकान है, महीने में ग्यारह हजार रुपये कमा लेता हूं। मैं सामान्य जाति का हिंदू हूं। आधार कार्ड, मतदाता पहचान पत्र और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "राकेश तिवारी",
+      "age": 26,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "अंजली तिवारी",
+      "district": "सतना",
+      "state": "मध्य प्रदेश",
+      "occupation": "किराना दुकानदार",
+      "monthly_income_inr": 11000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "MP shopkeeper young married general Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Madhya Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 175
+    }
+  },
+  {
+    "input_text": "मेरा नाम अनिंदिता बोस है। मेरी उम्र इकत्तीस साल है। मेरे पति का नाम सुदीप्तो बोस हैं। हम पश्चिम बंगाल के बर्धमान जिले के मेमारी कस्बे में रहते हैं। मैं अपनी एक छोटी जैविक खेती चलाती हूं, महीने में चालीस हजार रुपये कमा लेती हूं। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड और बंधन बैंक में खाता है।",
+    "output_json": {
+      "full_name": "अनिंदिता बोस",
+      "age": 31,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "सुदीप्तो बोस",
+      "village_or_town": "मेमारी",
+      "district": "बर्धमान",
+      "state": "पश्चिम बंगाल",
+      "occupation": "किसान",
+      "monthly_income_inr": 40000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "WB organic farmer married general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "West Bengal",
+      "source": "synthetic-claude-day4",
+      "slot": 176
+    }
+  },
+  {
+    "input_text": "एक सरकारी कार्यालय में लिपिक हूं। मेरा नाम मनीषा सिंह है, उम्र चालीस साल है। मेरे पति का नाम विकास सिंह है। हम झारखंड के देवघर जिले में रहते हैं। मासिक वेतन तेरह हजार रुपये है। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड और झारखंड ग्रामीण बैंक में खाता है।",
+    "output_json": {
+      "full_name": "मनीषा सिंह",
+      "age": 40,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "विकास सिंह",
+      "district": "देवघर",
+      "state": "झारखंड",
+      "occupation": "लिपिक",
+      "monthly_income_inr": 13000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "झारखंड ग्रामीण बैंक"
+    },
+    "metadata": {
+      "persona": "Jharkhand govt clerk married general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Jharkhand",
+      "source": "synthetic-claude-day4",
+      "slot": 177
+    }
+  },
+  {
+    "input_text": "एक निजी कंपनी से कुछ साल पहले सेवानिवृत्त हुई हूं। मेरा नाम वसुंधरा राव है, उम्र अट्ठावन साल है। मेरे पति का नाम कृष्णमूर्ति राव है। हम तेलंगाना के सिकंदराबाद में रहते हैं। पेंशन के तौर पर अठारह हजार रुपये मासिक मिलते हैं। मैं पिछड़ी जाति की हिंदू हूं। आधार कार्ड, पैन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "वसुंधरा राव",
+      "age": 58,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "कृष्णमूर्ति राव",
+      "village_or_town": "सिकंदराबाद",
+      "state": "तेलंगाना",
+      "occupation": "सेवानिवृत्त",
+      "monthly_income_inr": 18000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Telangana retired private married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Telangana",
+      "source": "synthetic-claude-day4",
+      "slot": 178
+    }
+  },
+  {
+    "input_text": "अभी नौकरी ढूंढ़ रहा हूं, फिलहाल घर पर रहता हूं। मेरा नाम भारत वाणकर है, उम्र अट्ठाईस साल है। मेरी पत्नी का नाम सपना है। हम गुजरात के सूरत में रहते हैं। पत्नी के काम से करीब आठ हजार रुपये मासिक का घर चलता है। मैं अनुसूचित जाति का हिंदू हूं। आधार कार्ड, राशन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "भारत वाणकर",
+      "age": 28,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "सपना",
+      "village_or_town": "सूरत",
+      "state": "गुजरात",
+      "occupation": "बेरोजगार",
+      "monthly_income_inr": 8000,
+      "caste_category": "sc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Gujarat between jobs married SC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Gujarat",
+      "source": "synthetic-claude-day4",
+      "slot": 179
+    }
+  },
+  {
+    "input_text": "इस उम्र में भी आंगनवाड़ी में बच्चों की देखभाल का काम करती हूं। मेरा नाम मरीना डेका है, उम्र अड़सठ साल है। मेरे पति का नाम सेमुअल डेका है। हम असम के सोनितपुर जिले में रहते हैं। मानदेय करीब बीस हजार रुपये मासिक मिलते हैं। मैं सामान्य जाति की ईसाई हूं। आधार कार्ड, मतदाता पहचान पत्र और बैंक खाता है।",
+    "output_json": {
+      "full_name": "मरीना डेका",
+      "age": 68,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "सेमुअल डेका",
+      "district": "सोनितपुर",
+      "state": "असम",
+      "occupation": "आंगनवाड़ी कार्यकर्ता",
+      "monthly_income_inr": 20000,
+      "caste_category": "general",
+      "religion": "ईसाई",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Assam elderly anganwadi married general Christian",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Assam",
+      "source": "synthetic-claude-day4",
+      "slot": 180
+    }
+  },
+  {
+    "input_text": "सब्जी का ठेला लगाती हूं। मेरा नाम रुखसाना खातून है, उम्र इकत्तीस साल है। मेरे पति का नाम मोहम्मद आरिफ है। हम बिहार के मोतिहारी जिले में रहते हैं। महीने में करीब आठ हजार रुपये बनते हैं। मैं सामान्य जाति की मुस्लिम हूं। आधार कार्ड और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "रुखसाना खातून",
+      "age": 31,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "मोहम्मद आरिफ",
+      "district": "मोतिहारी",
+      "state": "बिहार",
+      "occupation": "सब्जी विक्रेता",
+      "monthly_income_inr": 8000,
+      "caste_category": "general",
+      "religion": "इस्लाम",
+      "has_aadhaar": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "Bihar street vendor married general Muslim female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Bihar",
+      "source": "synthetic-claude-day4",
+      "slot": 181
+    }
+  },
+  {
+    "input_text": "मेरा नाम सोनम राठौड़ है। मेरी उम्र इक्कीस साल है। मेरे पति का नाम अंकित राठौड़ है। हम मध्य प्रदेश के मंदसौर जिले में रहते हैं, पिनकोड 458001 है। मैं अपने खेत पर काम करती हूं, महीने में चालीस हजार रुपये कमा लेती हूं। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "सोनम राठौड़",
+      "age": 21,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "अंकित राठौड़",
+      "village_or_town": "मंदसौर",
+      "state": "मध्य प्रदेश",
+      "pincode": "458001",
+      "occupation": "किसान",
+      "monthly_income_inr": 40000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "MP farmer young married general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Madhya Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 182
+    }
+  },
+  {
+    "input_text": "मेरा नाम संगीता बैनर्जी है। मेरी आयु अट्ठावन साल है। मेरे पति का नाम सुदीप बैनर्जी है। हम पश्चिम बंगाल के हुगली जिले के आरामबाग कस्बे में रहते हैं। मैं ग्राम पंचायत में लिपिक थी, अब रिटायर हो चुकी हूं, फिलहाल कोई आय नहीं है। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड, पैन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "संगीता बैनर्जी",
+      "age": 58,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "सुदीप बैनर्जी",
+      "village_or_town": "आरामबाग",
+      "district": "हुगली",
+      "state": "पश्चिम बंगाल",
+      "occupation": "सेवानिवृत्त लिपिक",
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "WB retired clerk married general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "West Bengal",
+      "source": "synthetic-claude-day4",
+      "slot": 183
+    }
+  },
+  {
+    "input_text": "मेरा नाम पद्मावती शर्मा है। मेरी उम्र छब्बीस साल है। पिता का नाम वेंकटेश्वर शर्मा हैं। मैं आंध्र प्रदेश के चित्तूर जिले में रहती हूं, अविवाहित हूं। मैं घर पर सिलाई का काम करती हूं, महीने में करीब बारह हजार रुपये बनते हैं। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड, मतदाता पहचान पत्र और बैंक खाता है।",
+    "output_json": {
+      "full_name": "पद्मावती शर्मा",
+      "age": 26,
+      "gender": "female",
+      "marital_status": "single",
+      "father_or_husband_name": "वेंकटेश्वर शर्मा",
+      "district": "चित्तूर",
+      "state": "आंध्र प्रदेश",
+      "occupation": "दर्जिन",
+      "monthly_income_inr": 12000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "AP tailor single general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Andhra Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 184
+    }
+  },
+  {
+    "input_text": "मेरा नाम रजनी पंवार है। मेरी आयु तीस वर्ष है। मेरे पति का नाम विकास पंवार है। हम मध्य प्रदेश के होशंगाबाद में रहते हैं। मैं घर पर सिलाई का काम करती हूं, महीने में करीब अठारह हजार रुपये बना लेती हूं। मैं सामान्य जाति की हिंदू हूं। आधार कार्ड, मतदाता पहचान पत्र और बैंक खाता है।",
+    "output_json": {
+      "full_name": "रजनी पंवार",
+      "age": 30,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "विकास पंवार",
+      "village_or_town": "होशंगाबाद",
+      "state": "मध्य प्रदेश",
+      "occupation": "दर्जिन",
+      "monthly_income_inr": 18000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "MP tailor married general Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Madhya Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 185
+    }
+  },
+  {
+    "input_text": "मनरेगा के तहत मजदूरी कर रहा हूं। मेरा नाम रामसुख यादव है, उम्र इकत्तीस साल है। मेरी पत्नी का नाम संगीता है। हम उत्तर प्रदेश के मिर्जापुर जिले में रहते हैं। महीने में करीब आठ हजार रुपये बनते हैं। मैं पिछड़ी जाति का हिंदू हूं। आधार कार्ड, राशन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "रामसुख यादव",
+      "age": 31,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "संगीता",
+      "district": "मिर्जापुर",
+      "state": "उत्तर प्रदेश",
+      "occupation": "मनरेगा मजदूर",
+      "monthly_income_inr": 8000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "UP MGNREGA married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 186
+    }
+  },
+  {
+    "input_text": "पति के देहांत के बाद अपना छोटा व्यवसाय शुरू किया। मेरा नाम कमला साठे है, उम्र इकत्तीस साल है। मैं महाराष्ट्र के अकोला जिले में रहती हूं। मेरे स्वर्गीय पति का नाम राकेश साठे था। मैं घर का बना अचार और पापड़ बेचती हूं, महीने में करीब चालीस हजार रुपये कमा लेती हूं। मैं अनुसूचित जाति की हिंदू हूं। आधार कार्ड, पैन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "कमला साठे",
+      "age": 31,
+      "gender": "female",
+      "marital_status": "widowed",
+      "father_or_husband_name": "स्वर्गीय राकेश साठे",
+      "district": "अकोला",
+      "state": "महाराष्ट्र",
+      "occupation": "घरेलू व्यवसायी",
+      "monthly_income_inr": 40000,
+      "caste_category": "sc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_pan": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Maharashtra small business widow SC Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Maharashtra",
+      "source": "synthetic-claude-day4",
+      "slot": 187
+    }
+  },
+  {
+    "input_text": "नई शादी हुई है, अभी घर पर ही हूं। मेरा नाम अनीता पटेल है, उम्र इक्कीस साल है। मेरे पति का नाम राजेश पटेल है। हम उत्तर प्रदेश के बहराइच जिले में रहते हैं। फिलहाल कुछ नहीं कमाती, ससुराल की पारिवारिक आय करीब बाईस हजार रुपये मासिक है। मैं पिछड़े वर्ग की हिंदू हूं। आधार कार्ड और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "अनीता पटेल",
+      "age": 21,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "राजेश पटेल",
+      "district": "बहराइच",
+      "state": "उत्तर प्रदेश",
+      "occupation": "गृहिणी",
+      "monthly_income_inr": 22000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "UP homemaker young married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 188
+    }
+  },
+  {
+    "input_text": "एक स्कूल बस का चालक हूं। मेरा नाम जॉनसन मसीह है, उम्र बीस साल है, अविवाहित हूं। मैं उत्तर प्रदेश के लखनऊ शहर में रहता हूं। मासिक वेतन सत्रह हजार रुपये है। मैं अनुसूचित जाति का ईसाई हूं। आधार कार्ड, मतदाता पहचान पत्र और बैंक खाता है।",
+    "output_json": {
+      "full_name": "जॉनसन मसीह",
+      "age": 20,
+      "gender": "male",
+      "marital_status": "single",
+      "village_or_town": "लखनऊ",
+      "state": "उत्तर प्रदेश",
+      "occupation": "बस चालक",
+      "monthly_income_inr": 17000,
+      "caste_category": "sc",
+      "religion": "ईसाई",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "UP bus driver young single SC Christian",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 189
+    }
+  },
+  {
+    "input_text": "घर-घर दूध पहुंचाने का काम करती हूं। मेरा नाम प्रीति कलिता है, उम्र अट्ठाईस साल है। मेरे पति का नाम बिप्लब कलिता है। हम असम के डिब्रूगढ़ जिले में रहते हैं। महीने में करीब आठ हजार रुपये कमा लेती हूं। मैं पिछड़ी जाति की हिंदू हूं। आधार कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "प्रीति कलिता",
+      "age": 28,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "बिप्लब कलिता",
+      "district": "डिब्रूगढ़",
+      "state": "असम",
+      "occupation": "दूध विक्रेता",
+      "monthly_income_inr": 8000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Assam milk vendor married OBC Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Assam",
+      "source": "synthetic-claude-day4",
+      "slot": 190
+    }
+  },
+  {
+    "input_text": "एक कपड़े का व्यापार चलाता हूं। मेरा नाम राकेश जैसवाल है, उम्र छियालीस साल है। मेरी पत्नी का नाम विनीता है। हम उत्तर प्रदेश के कानपुर शहर में रहते हैं। महीने में करीब पैंसठ हजार रुपये कमा लेता हूं। मैं पिछड़े वर्ग का हिंदू हूं। आधार कार्ड और एचडीएफसी बैंक में चालू खाता है।",
+    "output_json": {
+      "full_name": "राकेश जैसवाल",
+      "age": 46,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "विनीता",
+      "village_or_town": "कानपुर",
+      "state": "उत्तर प्रदेश",
+      "occupation": "कपड़ा व्यापारी",
+      "monthly_income_inr": 65000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "एचडीएफसी बैंक"
+    },
+    "metadata": {
+      "persona": "UP cloth merchant married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 191
+    }
+  },
+  {
+    "input_text": "खेत मजदूरी का काम करता हूं। मेरा नाम राजू पासवान है, उम्र इकत्तीस साल है। मैं झारखंड के गिरिडीह जिले में रहता हूं, अविवाहित हूं। महीने में लगभग पच्चीस हजार रुपये बना लेता हूं। मैं अनुसूचित जाति का हिंदू हूं। आधार कार्ड, राशन कार्ड और झारखंड ग्रामीण बैंक में खाता है।",
+    "output_json": {
+      "full_name": "राजू पासवान",
+      "age": 31,
+      "gender": "male",
+      "marital_status": "single",
+      "district": "गिरिडीह",
+      "state": "झारखंड",
+      "occupation": "खेत मजदूर",
+      "monthly_income_inr": 25000,
+      "caste_category": "sc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true,
+      "has_bank_account": true,
+      "bank_name": "झारखंड ग्रामीण बैंक"
+    },
+    "metadata": {
+      "persona": "Jharkhand agricultural laborer single SC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Jharkhand",
+      "source": "synthetic-claude-day4",
+      "slot": 192
+    }
+  },
+  {
+    "input_text": "पहले एक बड़ी कंपनी में थी, अब छोटे संस्थान में कार्यरत हूं। मेरा नाम सरिता राजन है, उम्र अड़तालीस साल है। मेरे पति का नाम मणि राजन हैं। हम केरल के एर्नाकुलम जिले में रहते हैं। मासिक वेतन तेरह हजार रुपये है। मैं अनुसूचित जनजाति की हिंदू हूं। आधार कार्ड और फेडरल बैंक में खाता है।",
+    "output_json": {
+      "full_name": "सरिता राजन",
+      "age": 48,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "मणि राजन",
+      "district": "एर्नाकुलम",
+      "state": "केरल",
+      "occupation": "निजी कर्मचारी",
+      "monthly_income_inr": 13000,
+      "caste_category": "st",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "फेडरल बैंक"
+    },
+    "metadata": {
+      "persona": "Kerala private executive married ST Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Kerala",
+      "source": "synthetic-claude-day4",
+      "slot": 193
+    }
+  },
+  {
+    "input_text": "उम्र हो गई है, फिलहाल काम नहीं मिल रहा। मेरा नाम कांता बेन सोलंकी है, उम्र अट्ठावन साल है। मेरे पति का नाम मोहन भाई है। हम गुजरात के पंचमहल जिले के गोधरा में रहते हैं। मैं मनरेगा में रजिस्टर्ड हूं पर इस महीने काम नहीं मिला। मैं पिछड़ी जाति की हिंदू हूं। आधार कार्ड, राशन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "कांता बेन सोलंकी",
+      "age": 58,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "मोहन भाई",
+      "village_or_town": "गोधरा",
+      "district": "पंचमहल",
+      "state": "गुजरात",
+      "occupation": "मनरेगा मजदूर",
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Gujarat MGNREGA no work married OBC Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Gujarat",
+      "source": "synthetic-claude-day4",
+      "slot": 194
+    }
+  },
+  {
+    "input_text": "विधुर हूं, पुरानी दुकान बंद हो गई। मेरा नाम रामकिशन धोबी है, उम्र छियालीस साल है। मैं उत्तर प्रदेश के मेरठ जिले में रहता हूं। पहले छोटी सी कपड़े धोने की दुकान थी, बंद हो गई, फिलहाल कोई आय नहीं है। मैं अनुसूचित जाति का हिंदू हूं। आधार कार्ड, राशन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "रामकिशन धोबी",
+      "age": 46,
+      "gender": "male",
+      "marital_status": "widowed",
+      "district": "मेरठ",
+      "state": "उत्तर प्रदेश",
+      "occupation": "धोबी",
+      "caste_category": "sc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "UP shopkeeper closed widowed SC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 195
+    }
+  },
+  {
+    "input_text": "मेरा नाम शाहीन परवीन है। मेरी उम्र चालीस साल है। मेरे पति का नाम मोहम्मद युसुफ है। हम पंजाब के अमृतसर शहर में रहते हैं। मेरी एक छोटी सी जनरल स्टोर है, महीने में करीब बाईस हजार रुपये कमा लेती हूं। मैं अनुसूचित जाति की मुस्लिम हूं। आधार कार्ड और पंजाब नेशनल बैंक में खाता है।",
+    "output_json": {
+      "full_name": "शाहीन परवीन",
+      "age": 40,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "मोहम्मद युसुफ",
+      "village_or_town": "अमृतसर",
+      "state": "पंजाब",
+      "occupation": "दुकानदार",
+      "monthly_income_inr": 22000,
+      "caste_category": "sc",
+      "religion": "इस्लाम",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "पंजाब नेशनल बैंक"
+    },
+    "metadata": {
+      "persona": "Punjab shop married SC Muslim female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Punjab",
+      "source": "synthetic-claude-day4",
+      "slot": 196
+    }
+  },
+  {
+    "input_text": "विधुर हूं, अब घर पर ही सिलाई करता हूं। मेरा नाम महावीर साव है, उम्र अड़तालीस साल है। मैं झारखंड के बोकारो जिले में रहता हूं। महीने में करीब आठ हजार रुपये कमा लेता हूं। मैं सामान्य जाति का हिंदू हूं। आधार कार्ड, मतदाता पहचान पत्र और बैंक खाता है।",
+    "output_json": {
+      "full_name": "महावीर साव",
+      "age": 48,
+      "gender": "male",
+      "marital_status": "widowed",
+      "district": "बोकारो",
+      "state": "झारखंड",
+      "occupation": "दर्जी",
+      "monthly_income_inr": 8000,
+      "caste_category": "general",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_voter_id": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "Jharkhand tailor widower general Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Jharkhand",
+      "source": "synthetic-claude-day4",
+      "slot": 197
+    }
+  },
+  {
+    "input_text": "मेरा नाम मीना सेन है। मेरी आयु अट्ठावन साल है। मेरे पति का नाम संजय सेन है। हम पश्चिम बंगाल के बीरभूम जिले के मुलारपुर गांव में रहते हैं। मैं खेत मजदूरी का काम करती हूं, महीने में आठ हजार रुपये बना लेती हूं। मैं पिछड़ी जाति की हिंदू हूं। आधार कार्ड और राशन कार्ड है।",
+    "output_json": {
+      "full_name": "मीना सेन",
+      "age": 58,
+      "gender": "female",
+      "marital_status": "married",
+      "father_or_husband_name": "संजय सेन",
+      "village_or_town": "मुलारपुर",
+      "district": "बीरभूम",
+      "state": "पश्चिम बंगाल",
+      "occupation": "खेत मजदूर",
+      "monthly_income_inr": 8000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true
+    },
+    "metadata": {
+      "persona": "WB agricultural laborer married OBC Hindu female",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "West Bengal",
+      "source": "synthetic-claude-day4",
+      "slot": 198
+    }
+  },
+  {
+    "input_text": "मेरा नाम मोहन कुमार है। मेरी उम्र छब्बीस साल है। मेरी पत्नी का नाम पूजा है। हम उत्तर प्रदेश के देवरिया जिले में रहते हैं। मैं निर्माण मजदूरी का काम करता हूं, महीने में करीब नौ हजार रुपये कमा लेता हूं। मैं पिछड़ी जाति का हिंदू हूं। आधार कार्ड, राशन कार्ड और बैंक खाता है।",
+    "output_json": {
+      "full_name": "मोहन कुमार",
+      "age": 26,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "पूजा",
+      "district": "देवरिया",
+      "state": "उत्तर प्रदेश",
+      "occupation": "निर्माण मजदूर",
+      "monthly_income_inr": 9000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_ration_card": true,
+      "has_bank_account": true
+    },
+    "metadata": {
+      "persona": "UP construction worker married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "Uttar Pradesh",
+      "source": "synthetic-claude-day4",
+      "slot": 199
+    }
+  },
+  {
+    "input_text": "घरेलू सहायक के तौर पर एक प्रतिष्ठित परिवार में लंबे समय से कार्यरत हूं। मेरा नाम सुदीप दास है, उम्र इकतालीस साल है। मेरी पत्नी का नाम चंचला है। हम पश्चिम बंगाल के कोलकाता शहर में रहते हैं। मासिक वेतन सत्तर हजार रुपये है। मैं पिछड़ी जाति का हिंदू हूं। आधार कार्ड और एचडीएफसी बैंक में खाता है।",
+    "output_json": {
+      "full_name": "सुदीप दास",
+      "age": 41,
+      "gender": "male",
+      "marital_status": "married",
+      "father_or_husband_name": "चंचला",
+      "village_or_town": "कोलकाता",
+      "state": "पश्चिम बंगाल",
+      "occupation": "घरेलू सहायक",
+      "monthly_income_inr": 70000,
+      "caste_category": "obc",
+      "religion": "हिंदू",
+      "has_aadhaar": true,
+      "has_bank_account": true,
+      "bank_name": "एचडीएफसी बैंक"
+    },
+    "metadata": {
+      "persona": "WB domestic worker high income married OBC Hindu",
+      "completeness": "dense",
+      "formality": "formal",
+      "region": "West Bengal",
+      "source": "synthetic-claude-day4",
+      "slot": 200
+    }
+  }
+]
