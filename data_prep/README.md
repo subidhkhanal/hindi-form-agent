@@ -157,13 +157,68 @@ for surname×caste×region compatibility and welfare-wage realism.
   without naming the bank. The conditional extraction rule the model learns
   (extract bank_name iff mentioned in input) is correct regardless.
 
-## Combined dataset (`data/train_v1.jsonl`, Day 7 deliverable)
+### 4. Hard cases (`data/hardcases_v1.jsonl`, n=40)
 
-To be assembled at end of Week 1 — keeping the full filtered HiNER pool
-available and stratifying by `fields_filled` at combination time, once the
-full synthetic distribution is known.
+Hand-crafted hard cases that stress-test the model on extraction edge cases not
+covered by synthetic data. Each entry targets a specific extraction difficulty,
+paired with the JSON that *correct* extraction logic should produce per the
+established rules.
 
-- `handcrafted_seed.jsonl` (n=10)
-- `from_ner_v1.jsonl` (n=6,422 — possibly stratified-subsampled at Day 7)
-- `synthetic_dense_v1.jsonl` (n=800, Days 3–4)
-- `hardcases_v1.jsonl` (Day 5)
+**Categories (4 entries each):**
+- Self-correction / disfluency
+- Conflicting information
+- Approximate values
+- Negation / explicit denial
+- Partial / trailing information
+- Implicit information (must NOT infer)
+- Multiple persons in input (extract speaker only)
+- Place name variants (use speaker's wording)
+- Indirect self-reference
+- Mixed scripts / numerals
+
+**Role in training:** These entries are evaluation-critical. They're small in
+volume but disproportionately important — they're what reveals whether the
+fine-tuned model handles real human messiness rather than only clean synthetic
+inputs. Some should be held out into the validation/test split.
+
+## 5. Train/Val/Test Split (`data/{train,val,test}_v1.jsonl`)
+
+Week 1 final corpus assembly. Combines all four sources into stratified splits.
+
+**Composition:**
+
+| Source | Train | Val | Test | Total |
+|---|---|---|---|---|
+| Hand-crafted seed | 10 | 0 | 0 | 10 |
+| HiNER (subsampled to 2000) | 1600 | 200 | 200 | 2000 |
+| Synthetic dense | 640 | 80 | 80 | 800 |
+| Hard cases | 20 | 10 | 10 | 40 |
+| **Total** | **2270** | **290** | **290** | **2850** |
+
+**Split design rationale:**
+
+- **HiNER subsampled to 2000 (from 6422)**: at full ratio, sparse HiNER would
+  dominate the loss signal and dilute the model's learning of dense first-person
+  extraction. Subsample preserves real-Hindi distributional signal without
+  overwhelming. *Note on stratification:* the brief targeted strata 600/800/600
+  across `fields_filled` 2/3/4, but HiNER's actual post-filter distribution is
+  `{2: 6398, 3: 24, 4: 0}` — only one meaningful stratum exists. The subsampler
+  takes all 24 from stratum-3 and tops up from stratum-2 to reach the 2000 target.
+- **Hard cases over-represented in val/test (25% each vs ~1.5% corpus weight)**:
+  hard cases are the most informative eval signal. Balanced per category —
+  every one of the 10 categories appears in val AND test (2 train / 1 val / 1 test).
+- **Hand-crafted seed all to train**: too few (10) to split meaningfully; serves
+  as anchor examples for the model.
+- **Synthetic and HiNER**: standard 80/10/10.
+
+**Reproducibility:** all splits use `random.seed(42)`. Re-running
+[`split_corpus.py`](split_corpus.py) produces identical splits.
+
+**Source tagging:** every entry's `metadata.source` is canonicalised to one of
+`handcrafted_seed`, `hiner`, `synthetic_dense`, `hardcases`. The original
+per-batch source (e.g., `synthetic-claude-day3`, `hardcases-day5`) is preserved
+under `metadata.original_source` for provenance.
+
+**See also:** [`data/split_manifest.json`](../data/split_manifest.json) (exact
+entry counts per source per split),
+[`split_comparison.md`](split_comparison.md) (distribution comparison across splits).

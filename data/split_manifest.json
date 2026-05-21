@@ -1,0 +1,25 @@
+{
+  "split_seed": 42,
+  "splits": {
+    "train": {
+      "total": 2270,
+      "handcrafted_seed": 10,
+      "hiner": 1600,
+      "synthetic_dense": 640,
+      "hardcases": 20
+    },
+    "val": {
+      "total": 290,
+      "hiner": 200,
+      "synthetic_dense": 80,
+      "hardcases": 10
+    },
+    "test": {
+      "total": 290,
+      "hiner": 200,
+      "synthetic_dense": 80,
+      "hardcases": 10
+    }
+  },
+  "hardcase_per_category_split": "2 train / 1 val / 1 test (each of 10 categories)"
+}
