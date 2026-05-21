@@ -34,13 +34,20 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--val-jsonl", default="data/val_v1.jsonl")
     p.add_argument("--output-dir", default="/kaggle/working/lora_smoke")
     p.add_argument("--max-steps", type=int, default=100)
+    p.add_argument("--num-train-epochs", type=float, default=0.0,
+                   help="If >0, train for this many epochs and ignore --max-steps")
     p.add_argument("--per-device-batch", type=int, default=2)
+    p.add_argument("--per-device-eval-batch", type=int, default=4)
     p.add_argument("--grad-accum", type=int, default=4)
     p.add_argument("--lr", type=float, default=2e-4)
     p.add_argument("--max-seq-len", type=int, default=1024)
     p.add_argument("--lora-r", type=int, default=16)
     p.add_argument("--lora-alpha", type=int, default=32)
     p.add_argument("--lora-dropout", type=float, default=0.05)
+    p.add_argument("--eval-steps", type=int, default=0,
+                   help="Evaluate on val every N steps. 0 = no eval (smoke mode).")
+    p.add_argument("--save-total-limit", type=int, default=1)
+    p.add_argument("--logging-steps", type=int, default=10)
     p.add_argument("--inference-only", action="store_true")
     p.add_argument("--adapter", default=None,
                    help="Adapter path for --inference-only mode")
@@ -196,21 +203,38 @@ def run_training(args: argparse.Namespace) -> None:
     response_template = f"\n{OUTPUT_DELIMITER}\n"
     collator = DataCollatorForCompletionOnlyLM(response_template, tokenizer=tokenizer)
 
-    training_args = TrainingArguments(
+    common = dict(
         output_dir=args.output_dir,
-        max_steps=args.max_steps,
         per_device_train_batch_size=args.per_device_batch,
+        per_device_eval_batch_size=args.per_device_eval_batch,
         gradient_accumulation_steps=args.grad_accum,
         learning_rate=args.lr,
-        logging_steps=10,
-        save_steps=args.max_steps,
-        eval_strategy="no",
+        logging_steps=args.logging_steps,
         fp16=True,
         optim="paged_adamw_8bit",
         warmup_ratio=0.05,
         lr_scheduler_type="cosine",
         report_to="none",
     )
+    duration = (
+        {"num_train_epochs": args.num_train_epochs}
+        if args.num_train_epochs > 0
+        else {"max_steps": args.max_steps}
+    )
+    if args.eval_steps > 0:
+        eval_save = dict(
+            eval_strategy="steps",
+            eval_steps=args.eval_steps,
+            save_strategy="steps",
+            save_steps=args.eval_steps,
+            save_total_limit=args.save_total_limit,
+            load_best_model_at_end=True,
+            metric_for_best_model="eval_loss",
+            greater_is_better=False,
+        )
+    else:
+        eval_save = dict(eval_strategy="no", save_strategy="no")
+    training_args = TrainingArguments(**common, **duration, **eval_save)
 
     trainer = SFTTrainer(
         model=model,
