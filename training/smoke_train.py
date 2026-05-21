@@ -108,8 +108,10 @@ def run_inference(args: argparse.Namespace) -> None:
         print(f"\n--- predicted ---\n{gen_text}")
         print(f"\n--- gold ---\n{json.dumps(row['output_json'], ensure_ascii=False)}")
 
+        # raw_decode returns the first valid JSON object and ignores trailing data,
+        # so duplicate-JSON generations don't cause false "Extra data" failures.
         try:
-            predicted_json = json.loads(gen_text)
+            predicted_json, _ = json.JSONDecoder().raw_decode(gen_text)
             parse_ok += 1
             try:
                 CitizenProfile.model_validate(predicted_json)
@@ -179,9 +181,12 @@ def run_training(args: argparse.Namespace) -> None:
                 if not line:
                     continue
                 entry = json.loads(line)
-                rows.append({
-                    "text": format_for_training(entry["input_text"], entry["output_json"])
-                })
+                # Append EOS so the model learns to stop at the end of the JSON.
+                # Without this, generation keeps emitting more JSON objects until
+                # max_new_tokens is reached, breaking json.loads with "Extra data".
+                text = format_for_training(entry["input_text"], entry["output_json"])
+                text += tokenizer.eos_token
+                rows.append({"text": text})
         return Dataset.from_list(rows)
 
     train_ds = jsonl_to_text_dataset(args.train_jsonl)
