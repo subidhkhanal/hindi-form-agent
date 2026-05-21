@@ -106,6 +106,7 @@ def run_inference(args: argparse.Namespace) -> None:
                 max_new_tokens=args.max_new_tokens,
                 do_sample=False,
                 pad_token_id=tokenizer.pad_token_id,
+                eos_token_id=tokenizer.eos_token_id,
             )
         gen_ids = out[0][inputs["input_ids"].shape[1]:]
         gen_text = tokenizer.decode(gen_ids, skip_special_tokens=True).strip()
