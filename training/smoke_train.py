@@ -126,7 +126,7 @@ def run_inference(args: argparse.Namespace) -> None:
 
 def run_training(args: argparse.Namespace) -> None:
     import torch
-    from datasets import load_dataset
+    from datasets import Dataset
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
     from transformers import (
         AutoModelForCausalLM,
@@ -163,11 +163,26 @@ def run_training(args: argparse.Namespace) -> None:
     model = get_peft_model(model, lora)
     model.print_trainable_parameters()
 
-    def to_text(row):
-        return {"text": format_for_training(row["input_text"], row["output_json"])}
+    # Read JSONL manually rather than via load_dataset("json", ...) — the latter uses
+    # PyArrow which infers a single schema across all rows, and our train_v1.jsonl mixes
+    # 4 sources whose metadata fields have inconsistent types (e.g. metadata.slot is int
+    # in synthetic batches but str elsewhere). We only need `input_text` + `output_json`
+    # for training, so drop everything else.
+    def jsonl_to_text_dataset(path: str) -> Dataset:
+        rows = []
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                entry = json.loads(line)
+                rows.append({
+                    "text": format_for_training(entry["input_text"], entry["output_json"])
+                })
+        return Dataset.from_list(rows)
 
-    train_ds = load_dataset("json", data_files=args.train_jsonl, split="train").map(to_text)
-    val_ds = load_dataset("json", data_files=args.val_jsonl, split="train").map(to_text)
+    train_ds = jsonl_to_text_dataset(args.train_jsonl)
+    val_ds = jsonl_to_text_dataset(args.val_jsonl)
 
     # Mask the Hindi prompt — only the JSON contributes to loss.
     response_template = f"\n{OUTPUT_DELIMITER}\n"
