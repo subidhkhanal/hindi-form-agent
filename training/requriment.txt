@@ -1,0 +1,11 @@
+# Working versions verified on Kaggle T4 — May 2026
+# Generated after Week 1 preflight passed all checks
+torch>=2.4
+transformers==4.46.3
+peft==0.14.0
+bitsandbytes>=0.46.1
+accelerate==1.13.0
+trl==0.12.2
+datasets==3.6.0
+sentencepiece
+protobuf>=4.25,<5.0
