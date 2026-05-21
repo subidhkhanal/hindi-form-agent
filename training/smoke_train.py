@@ -81,7 +81,7 @@ def run_inference(args: argparse.Namespace) -> None:
         bnb_4bit_use_double_quant=True,
     )
     base = AutoModelForCausalLM.from_pretrained(
-        args.model_id, quantization_config=bnb, device_map="auto",
+        args.model_id, quantization_config=bnb, device_map={"": 0},
     )
     model = PeftModel.from_pretrained(base, args.adapter)
     model.eval()
@@ -139,6 +139,7 @@ def run_training(args: argparse.Namespace) -> None:
     tokenizer = AutoTokenizer.from_pretrained(args.model_id, use_fast=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.padding_side = "right"  # required for training (Llama default is "left")
 
     # T4 = Turing → fp16. bf16 would crash here.
     bnb = BitsAndBytesConfig(
@@ -147,8 +148,10 @@ def run_training(args: argparse.Namespace) -> None:
         bnb_4bit_compute_dtype=torch.float16,
         bnb_4bit_use_double_quant=True,
     )
+    # Pin to a single GPU — device_map="auto" shards across all visible GPUs on Kaggle
+    # T4 x2, which breaks the loss reduction step (tensors on cuda:0 and cuda:1).
     model = AutoModelForCausalLM.from_pretrained(
-        args.model_id, quantization_config=bnb, device_map="auto",
+        args.model_id, quantization_config=bnb, device_map={"": 0},
     )
     model = prepare_model_for_kbit_training(model)
 
