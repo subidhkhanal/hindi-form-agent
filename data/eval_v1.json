@@ -1,0 +1,142 @@
+{
+  "n_entries": 290,
+  "adapter": "/kaggle/working/lora_v1",
+  "test_jsonl": "data/test_v1.jsonl",
+  "overall": {
+    "parse_ok": 290,
+    "parse_rate": 1.0,
+    "schema_ok": 290,
+    "schema_rate": 1.0,
+    "field_correct": 5692,
+    "field_total": 5800,
+    "field_accuracy": 0.9813793103448276
+  },
+  "by_source": {
+    "hardcases": {
+      "n": 10,
+      "parse_rate": 1.0,
+      "schema_rate": 1.0,
+      "field_accuracy": 0.955,
+      "gold_nonnull_field_accuracy": 0.9344262295081968,
+      "n_gold_nonnull_fields": 61
+    },
+    "hiner": {
+      "n": 200,
+      "parse_rate": 1.0,
+      "schema_rate": 1.0,
+      "field_accuracy": 0.9805,
+      "gold_nonnull_field_accuracy": 0.8075,
+      "n_gold_nonnull_fields": 400
+    },
+    "synthetic_dense": {
+      "n": 80,
+      "parse_rate": 1.0,
+      "schema_rate": 1.0,
+      "field_accuracy": 0.986875,
+      "gold_nonnull_field_accuracy": 0.9829706717123936,
+      "n_gold_nonnull_fields": 1057
+    }
+  },
+  "by_field": {
+    "full_name": {
+      "accuracy": 0.8862068965517241,
+      "gold_nonnull_accuracy": 0.8862068965517241,
+      "n_gold_nonnull": 290
+    },
+    "age": {
+      "accuracy": 0.996551724137931,
+      "gold_nonnull_accuracy": 0.9888888888888889,
+      "n_gold_nonnull": 90
+    },
+    "gender": {
+      "accuracy": 0.996551724137931,
+      "gold_nonnull_accuracy": 0.9888888888888889,
+      "n_gold_nonnull": 90
+    },
+    "marital_status": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 80
+    },
+    "father_or_husband_name": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 59
+    },
+    "number_of_dependents": {
+      "accuracy": 0.993103448275862,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 3
+    },
+    "village_or_town": {
+      "accuracy": 0.9896551724137931,
+      "gold_nonnull_accuracy": 0.9512195121951219,
+      "n_gold_nonnull": 41
+    },
+    "district": {
+      "accuracy": 0.8413793103448276,
+      "gold_nonnull_accuracy": 0.824,
+      "n_gold_nonnull": 250
+    },
+    "state": {
+      "accuracy": 0.9896551724137931,
+      "gold_nonnull_accuracy": 0.9777777777777777,
+      "n_gold_nonnull": 90
+    },
+    "pincode": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 10
+    },
+    "occupation": {
+      "accuracy": 0.9482758620689655,
+      "gold_nonnull_accuracy": 0.8604651162790697,
+      "n_gold_nonnull": 86
+    },
+    "monthly_income_inr": {
+      "accuracy": 0.9862068965517241,
+      "gold_nonnull_accuracy": 0.9428571428571428,
+      "n_gold_nonnull": 70
+    },
+    "caste_category": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 78
+    },
+    "religion": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 80
+    },
+    "has_aadhaar": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 81
+    },
+    "has_pan": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 9
+    },
+    "has_voter_id": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 9
+    },
+    "has_ration_card": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 26
+    },
+    "has_bank_account": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 51
+    },
+    "bank_name": {
+      "accuracy": 1.0,
+      "gold_nonnull_accuracy": 1.0,
+      "n_gold_nonnull": 25
+    }
+  }
+}
