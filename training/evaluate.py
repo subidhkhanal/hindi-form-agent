@@ -58,9 +58,45 @@ def main() -> None:
     # Deferred heavy imports so --help is fast
     import torch
     from peft import PeftModel
-    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+    from transformers import (
+        AutoModelForCausalLM,
+        AutoTokenizer,
+        BitsAndBytesConfig,
+        StoppingCriteria,
+        StoppingCriteriaList,
+    )
 
     from schemas.citizen_profile import CitizenProfile
+
+    class JsonCompleteStop(StoppingCriteria):
+        """Stop generation once decoded output contains a complete JSON object.
+
+        The fine-tuned model often over-generates past the closing `}` (duplicate
+        JSONs, prompt echoes, free Hindi text). Without this, every sample runs
+        to max_new_tokens — ~42s/sample on T4 vs ~10s with the early stop.
+        """
+
+        def __init__(self, tokenizer, prompt_len: int, check_every: int = 4):
+            self.tokenizer = tokenizer
+            self.prompt_len = prompt_len
+            self.check_every = check_every
+            self.step = 0
+
+        def __call__(self, input_ids, scores, **kwargs) -> bool:
+            self.step += 1
+            if self.step % self.check_every != 0:
+                return False
+            gen_ids = input_ids[0, self.prompt_len:]
+            if len(gen_ids) < 20:
+                return False
+            text = self.tokenizer.decode(gen_ids, skip_special_tokens=True)
+            if "}" not in text:
+                return False
+            try:
+                json.JSONDecoder().raw_decode(text)
+                return True
+            except json.JSONDecodeError:
+                return False
 
     schema_fields = list(CitizenProfile.model_fields.keys())
 
@@ -111,6 +147,9 @@ def main() -> None:
 
         prompt = format_for_inference(entry["input_text"])
         inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+        stop = StoppingCriteriaList([
+            JsonCompleteStop(tokenizer, prompt_len=inputs["input_ids"].shape[1])
+        ])
         with torch.no_grad():
             out = model.generate(
                 **inputs,
@@ -118,6 +157,7 @@ def main() -> None:
                 do_sample=False,
                 pad_token_id=tokenizer.pad_token_id,
                 eos_token_id=tokenizer.eos_token_id,
+                stopping_criteria=stop,
             )
         gen_ids = out[0][inputs["input_ids"].shape[1]:]
         gen_text = tokenizer.decode(gen_ids, skip_special_tokens=True).strip()
